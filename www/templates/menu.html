@@ -16,7 +16,7 @@
     <ion-header-bar class="bar-dark">
       <h1 class="title">TellTale</h1>
     </ion-header-bar>
-    <ion-content>
+    <ion-content ng-controller="weatherAlert">
       <ion-list>
 <!--
         <ion-item nav-clear menu-close ng-click="login()">
@@ -44,6 +44,7 @@
           Settings
         </ion-item>
       </ion-list>
+      <button ng-click="add()" class="button button-icon icon ion-alert-circled" style="bottom: 0; float: right;"></button>
     </ion-content>
   </ion-side-menu>
 </ion-side-menus>

@@ -4,9 +4,9 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers'])
+var ionicApp = angular.module('starter', ['ionic', 'starter.controllers', 'ngCordova'])
 
-.run(function($ionicPlatform) {
+ionicApp.run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
@@ -20,7 +20,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
   });
 })
 
-.config(function($stateProvider, $urlRouterProvider) {
+ionicApp.config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
 
   .state('app', {
@@ -86,4 +86,22 @@ angular.module('starter', ['ionic', 'starter.controllers'])
 
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/app/today');
+});
+
+ionicApp.controller("weatherAlert", function($scope, $cordovaLocalNotification){
+    $scope.add = function(){
+        var alarmTime = new Date();
+        alarmTime.setSeconds(alarmTime.getSeconds() + 10);
+        $cordovaLocalNotification.add({
+            id: "13372",
+            date: alarmTime,
+            message: "Sunny - 1000 IU Vitamin D - High: 25C Low: 10C - 25 minutes sun exposure",
+            title: "Daily Forecast",
+            led: "F3B600",
+            icon: "res://sunny",
+            smallIcon: "res://icon"
+        }).then(function(){
+            console.log("notification was set")
+        });
+    }
 });
