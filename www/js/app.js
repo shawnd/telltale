@@ -47,6 +47,42 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       }
     }
   })
+  
+  .state('app.store', {
+    url: "/store",
+    views: {
+      'menuContent': {
+        templateUrl: "templates/store.html"
+      }
+    }
+  })
+  
+  .state('app.hourly', {
+    url: "/hourly",
+    views: {
+      'menuContent': {
+        templateUrl: "templates/hourly.html"
+      }
+    }
+  })
+  
+  .state('app.vitdinfo', {
+    url: "/vitdinfo",
+    views: {
+      'menuContent': {
+        templateUrl: "templates/vitdinfo.html"
+      }
+    }
+  })
+  
+  .state('app.settings', {
+    url: "/settings",
+    views: {
+      'menuContent': {
+        templateUrl: "templates/settings.html"
+      }
+    }
+  })
 
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/app/today');

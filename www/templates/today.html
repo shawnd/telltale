@@ -1,62 +1,30 @@
+<ion-nav-back-button>
+</ion-nav-back-button>
 <ion-view view-title="Today">
-  <ion-content>
-    <div class="list card">
-        <div class="item item-avatar">
-            <div class="col">
-                <i class="icon ion-ios-sunny"></i>
+    <ion-content>
+        <ion-refresher pulling-text="Pull to refresh..."></ion-refresher>
+        <div class="list list-inset">
+            <label class="item item-input">
+                <i class="icon ion-search placeholder-icon"></i>
+                <input type="text" placeholder="Search City">
+            </label>
+        </div>
+        <div class="list card">
+            <a href="#/app/hourly" class="item item-avatar">
                 <h2>November 05, 1955</h2>
-                <p>Amazing day</p>
+                <p><i class="icon ion-navigate"></i> Surrey, B.C. <br>Sunny <br>High: 28C Low: 18C</p>
+            </a>
+        </div>
+        <div class="list card">
+            <div class="item item-avatar">
+                <h2>Vitamin D</h2>
+                <p>1000IU <br>28 minutes sunlight <br>Diet...</p>
             </div>
         </div>
-        <div class="item item-avatar">
-            <h2>Vitamin D</h2>
-            <p>1000IU <br>28 minutes sunlight <br>Diet...</p>
-        </div>
-        <div class="item item-body">
-            <a href="#" class="item item-icon-left">
-                <i class="icon ion-ios-sunny"></i>
-                <div class="col">
-                    10:00
-                </div>
-                <div class="col">
-                    65C
-                </div>
-            </a>
-
-            <a href="#" class="item item-icon-left">
-                <i class="icon ion-ios-sunny"></i>
-                11:00
-            </a>
-
-            <a href="#" class="item item-icon-left">
-                <i class="icon ion-ios-sunny"></i>
-                12:00
-            </a>
-
-            <a href="#" class="item item-icon-left">
-                <i class="icon ion-ios-sunny"></i>
-                13:00
-            </a>
-            <a href="#" class="item item-icon-left">
-                <i class="icon ion-ios-sunny"></i>
-                14:00
-            </a>
-
-            <a href="#" class="item item-icon-left">
-                <i class="icon ion-ios-sunny"></i>
-                15:00
-            </a>
-
-            <a href="#" class="item item-icon-left">
-                <i class="icon ion-ios-sunny"></i>
-                16:00
-            </a>
-
-            <a href="#" class="item item-icon-left">
-                <i class="icon ion-ios-sunny"></i>
-                17:00
+        <div class="padding">
+            <a href="#/app/store" class="button button-block button-positive icon ion-ios-cart">
+                Buy Vitamin D
             </a>
         </div>
-    </div>
-  </ion-content>
+    </ion-content>
 </ion-view>
